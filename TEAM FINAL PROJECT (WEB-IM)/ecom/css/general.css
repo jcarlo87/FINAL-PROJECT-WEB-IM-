@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,500;0,600;0,700;0,800;1,200&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* remove the text selection cursor everytime you click a word in the website */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  font-family: 'Mulish', sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*** SIGN PAGE ***/
+/* styles for login and sign up form */
+#admin-sign-account-page-wrapper {
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+#sign-account-page-wrapper, #admin-sign-account-page-wrapper {
+  height: 100%;
+  display: flex;
+}
+
+.sign-account-bg {
+  height: 100vh;
+  width: 60%;
+}
+.sign-account-bg-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#sign-account-page-wrapper .form-wrapper,  #admin-sign-account-page-wrapper .form-wrapper {
+  height: 100%;
+  flex: 1;
+}
+
+#sign-account-page-wrapper form,  #admin-sign-account-page-wrapper form {
+  display: flex;
+  flex-direction: column;
+  padding: 8% 13% 0;
+}
+
+#sign-account-page-wrapper form a, #admin-sign-account-page-wrapper form a{
+  color: rgb(1, 85, 110);
+  text-decoration: none;
+  font-weight: bold;
+}
+#sign-account-page-wrapper form a:hover,  #admin-sign-account-page-wrapper form a:hover {
+  color: rgb(0, 109, 143);
+}
+
+#sign-account-page-wrapper form h1,  #admin-sign-account-page-wrapper form h1 {
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+}
+
+#sign-account-page-wrapper form p,  #admin-sign-account-page-wrapper form p {
+  color: rgb(116, 116, 116);
+  margin-bottom: 35px;
+}
+
+#sign-account-page-wrapper form input,  #admin-sign-account-page-wrapper form input {
+  height: 45px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}
+
+#admin-sign-account-page-wrapper form .password-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #d1d1d1;
+  height: 45px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#admin-sign-account-page-wrapper form #admin_password {
+  height: 100%;
+  width: 100%;
+  border: none;
+  margin-bottom: 0;
+}
+
+#admin-sign-account-page-wrapper form #admin_password:focus {
+  outline: 0;
+}
+
+#sign-account-page-wrapper form input::placeholder,  #admin-sign-account-page-wrapper form input::placeholder {
+  font-weight: 500;
+}
+
+.checkboxAndForgotPass-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  margin-bottom: 30px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  color: rgb(116, 116, 116);
+}
+#sign-account-page-wrapper form input[type='checkbox'],  #admin-sign-account-page-wrapper form input[type='checkbox'] {
+  margin: 0 10px 0 0;
+  cursor: pointer;
+}
+
+#sign-account-page-wrapper form input[type='submit'], #admin-sign-account-page-wrapper form input[type='submit'] {
+  background-color: rgb(1, 85, 110);
+  width: 100%;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+#sign-account-page-wrapper form .signup-link, #admin-sign-account-page-wrapper form .signup-link {
+  margin-left: 6px;
+}
+
+
+

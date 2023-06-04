@@ -1,0 +1,361 @@
+/** ADMIN PANEL **/
+#admin-panel-body {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  height: 100vh;
+  width: 100%;
+  background: rgb(237, 246, 248);
+  overflow-x: hidden;
+}
+
+/* ADMIN NAV SECTION */
+
+
+/* SIDE SECTION */
+#side-section {
+  width: 200px;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+#side-section .active {
+  background-color: rgb(235, 235, 235);
+}
+
+#side-section .logo {
+  font-size: 2.5rem;
+  display: block;
+}
+
+#side-section a {
+  color: black;
+  text-decoration: none;
+}
+
+#side-section .logo-wrapper {
+  height: 150px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: rgb(1, 85, 110);
+  padding: 30px 15px;
+  text-align: center;
+}
+
+#side-section li {
+  height: 50px;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#side-section li:hover {
+  color: rgb(78, 78, 78);
+}
+
+#side-section li a {
+  display: flex;
+  align-items: center;
+}
+
+#side-section li span {
+  margin-right: 8px;
+}
+
+/* MAIN SECTION */
+#main-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 225px;
+  background: rgb(237, 246, 248);
+}
+
+#main-section h1 {
+  font-size: 1.4rem;
+}
+
+/* admin navigation */
+#admin-nav {
+  height: 90px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+#admin-nav .admin-panel-label {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: auto;
+  color: rgb(1, 85, 110);
+}
+
+#admin-nav .admin-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#admin-nav .admin-nav-btn > * {
+  margin-right: 10px;
+}
+
+#admin-nav .notification-bell {
+  color: rgb(1, 85, 110);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* admin account name and icon */
+#admin-nav .account-name {
+  font-size: 0.8rem;
+  color: rgb(1, 85, 110);
+}
+
+#admin-nav .admin-account-logo {
+  font-size: 2rem;
+  border: 3px solid rgb(1, 85, 110);
+  color: rgb(1, 85, 110);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#admin-nav #account-box {
+  display: none;
+  position: absolute;
+  right: 1.5rem;
+  top: 5rem;
+  width: 18rem;
+  border-radius: .5rem;
+  padding: 2rem;
+  border-radius: .5rem;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: #fff;
+}
+
+#admin-nav #account-box li {
+  margin-bottom: 10px;
+}
+
+.show-menu {
+  display: block;
+}
+
+#admin-nav #account-box .logout-btn {
+  background-color: rgb(232, 50, 50);
+  color: white;
+  font-size: 1rem;
+  padding: 0.2em 0.5em 0.3em 0.5em;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
+/** MAIN LIST SECTION **/
+#main-section-list {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  background-color: #fff;
+  padding: 30px 20px;
+  margin: 40px 25px 0 0;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* add product form */
+.close-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.open-add-form-btn {
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(1, 85, 110);
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.add-product-btn:hover {
+  background-color: rgb(1, 111, 145);
+}
+
+#addProductForm,
+#addCategoryForm,
+#addSupplierForm {
+  display: none;
+}
+
+.popup {
+  z-index: 1200;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 500px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.popup .form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.popup form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.popup select,
+.popup input,
+.popup textarea {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  display: block;
+}
+
+.popup form textarea {
+  height: 100px;
+  padding-top: 10px;
+}
+
+.popup form .option-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.popup input[type="file"] {
+  padding-left: 0;
+}
+
+.popup input[type="file"]::file-selector-button {
+  height: 100%;
+  border: none;
+  background: rgb(1, 85, 110);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.popup input[type="file"]::file-selector-button:hover {
+  background: rgb(0, 100, 131);
+}
+
+.popup form input[type="submit"] {
+  background-color: rgb(1, 85, 110);
+  color: white;
+  cursor: pointer;
+}
+
+.popup input[type="submit"]:hover {
+  background: rgb(0, 113, 148);
+}
+
+/* display list */
+#main-section-list table {
+  margin-top: 10px;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+#main-section-list thead {
+  color: #fff;
+  background-color: rgb(1, 85, 110);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+
+#main-section-list td {
+  height: 40px;
+  font-size: 0.8rem;
+  padding: 0.3em 2em;
+  border: 1px solid rgba(207, 207, 207, 0.5);
+  text-overflow: ellipsis;
+}
+
+#main-section-list .order-table td {
+height: 30px;
+font-size: 0.5rem;
+padding: 0.3em 0 0.3em 2em;
+}
+
+#main-section .order-table .id-td, #main-section .order-table .action-td {
+  width: 70px;
+}
+
+#main-section-list .id-td, #main-section-list .action-td {
+  width: 120px;
+
+}
+
+#main-section-list .product-img-list {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+#main-section-list .product-img-list img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#main-section-list .product-name-cell-container {
+  display: flex;
+  align-items: center;
+}
+
+#main-section-list .quantity-status {
+  background-color: rgb(238, 238, 238);
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+
+#main-section-list .red {
+  background-color: rgb(255, 219, 219);
+}
+
+#main-section-list .action-col-cells {
+  padding: 0 0 0 30px;
+}
+
+#main-section-list table .material-symbols-outlined {
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 0.1em;
+}
+
+.edit-btn {
+  color: rgb(1, 85, 110);
+}
+
+.delete-btn {
+  color: rgb(158, 0, 0);
+}

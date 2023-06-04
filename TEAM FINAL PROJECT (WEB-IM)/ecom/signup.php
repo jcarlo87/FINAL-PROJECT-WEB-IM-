@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (isset($_SESSION["user"])) {
-   header("Location: index.php");
+if (isset($_SESSION["customer"])) {
+   header("Location:customer/index.php");
 }
 ?>
 
@@ -12,28 +12,7 @@ if (isset($_SESSION["user"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up</title>
-    <link rel="stylesheet" href="css/styles.css"/>
-    <style>
-      .alert-danger {
-        color: #851923;
-        padding: 4px 6px;
-        text-align: center;
-        border-radius: 4px;
-        background: #ffe3e5;
-        border: 1px solid #dfa4ab;
-        margin: 15px 30px 0;
-      }
-
-      .alert-success{
-        color: #198519;
-        padding: 4px 6px;
-        text-align: center;
-        border-radius: 4px;
-        background: #e3ffe3;
-        border: 1px solid #a8dfa4;
-        margin: 15px 30px 0;
-      }
-    </style>
+    <link rel="stylesheet" href="css/general.css"/>
   </head>
   <body>
     <div id="sign-account-page-wrapper">
@@ -49,10 +28,9 @@ if (isset($_SESSION["user"])) {
            $shipping_address = $_POST["customer_address"];
            $password = $_POST["customer_password"];
            $passwordRepeat = $_POST["customer_confirm_password"];
-           
+           //encrypt password
            $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-
-           $errors = array();
+           $errors = array(); //variable for error message
            
            if (empty($fullName) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
             array_push($errors,"All fields are required");
@@ -75,7 +53,7 @@ if (isset($_SESSION["user"])) {
            }
            if (count($errors)>0) {
             foreach ($errors as  $error) {
-                echo "<div class='alert-danger'>$error</div>";
+                echo "<script>alert($error)</script>";
             }
            }else{
             
@@ -85,7 +63,7 @@ if (isset($_SESSION["user"])) {
             if ($prepareStmt) {
                 mysqli_stmt_bind_param($stmt,"ssss",$fullName, $email, $shipping_address, $passwordHash);
                 mysqli_stmt_execute($stmt);
-                echo "<div class='alert-success'>You are registered successfully.</div>";
+                echo "<script>alert('You are registered successfully.')</script>";
             }else{
                 die("Something went wrong");
             }
@@ -149,7 +127,7 @@ if (isset($_SESSION["user"])) {
             <input type="submit" name="submit" id="submit" value="Sign up" />
           </div>
           <p>
-            Already a member?<a class="signup-link" href="login.php"
+            Already a member?<a class="signup-link" href="index.php"
               >Log in</a
             >
           </p>
